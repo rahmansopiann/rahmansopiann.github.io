@@ -2,45 +2,80 @@ import { Project } from './types';
 
 export const projects: Project[] = [
   {
-    id: '1',
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce solution with real-time inventory management and secure payment integration.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/example/ecommerce',
-    demoUrl: 'https://demo-ecommerce.example.com',
-    image: 'https://picsum.photos/seed/shop/800/600'
+    id: '1205566461',
+    title: 'website-samawa',
+    description: 'project website samawa',
+    technologies: ['TypeScript'],
+    githubUrl: 'https://github.com/rahmansopiann/website-samawa'
   },
   {
-    id: '2',
-    title: 'AI Image Generator',
-    description: 'An application that generates original artwork using generative AI models and allows users to share their creations.',
-    technologies: ['Next.js', 'OpenAI API', 'Firebase', 'Framer Motion'],
-    githubUrl: 'https://github.com/example/ai-art',
-    demoUrl: 'https://ai-art.example.com',
-    image: 'https://picsum.photos/seed/ai/800/600'
+    id: '898005964',
+    title: 'cypress-cucumber',
+    description: 'cypress-cucumber',
+    technologies: ['JavaScript'],
+    githubUrl: 'https://github.com/rahmansopiann/cypress-cucumber'
   },
   {
-    id: '3',
-    title: 'Task Management Dashboard',
-    description: 'A collaborative productivity tool with drag-and-drop task boards, analytics, and team chat features.',
-    technologies: ['TypeScript', 'Express', 'PostgreSQL', 'Socket.io'],
-    githubUrl: 'https://github.com/example/tasks',
-    image: 'https://picsum.photos/seed/tasks/800/600'
+    id: '610777975',
+    title: 'cypressTest',
+    description: 'cypressTest',
+    technologies: ['HTML'],
+    githubUrl: 'https://github.com/rahmansopiann/cypressTest'
   },
   {
-    id: '4',
-    title: 'Weather Tracker Pro',
-    description: 'Highly accurate weather forecasting app with interactive maps and personalized location-based alerts.',
-    technologies: ['React Native', 'OpenWeather API', 'Lottie'],
-    githubUrl: 'https://github.com/example/weather',
-    image: 'https://picsum.photos/seed/weather/800/600'
+    id: '607587201',
+    title: 'OTP-Automation-TiketCom',
+    description: 'Automate user behaviour on using tiket.com which use OTP as authentication factor ',
+    technologies: ['Java'],
+    githubUrl: 'https://github.com/rahmansopiann/OTP-Automation-TiketCom'
   },
   {
-    id: '5',
-    title: 'Cryptocurrency Analytics',
-    description: 'Real-time crypto asset tracker with advanced charting and predictive pricing indicators.',
-    technologies: ['Vue.js', 'D3.js', 'CoinGecko API'],
-    githubUrl: 'https://github.com/example/crypto',
-    image: 'https://picsum.photos/seed/crypto/800/600'
+    id: '605859860',
+    title: 'k6PerformanceTest',
+    description: 'k6PerformanceTest',
+    technologies: ['HTML'],
+    githubUrl: 'https://github.com/rahmansopiann/k6PerformanceTest'
+  },
+  {
+    id: '605468671',
+    title: 'sanber-mobileAutomation',
+    description: 'fork mobile automations',
+    technologies: ['JavaScript'],
+    githubUrl: 'https://github.com/rahmansopiann/sanber-mobileAutomation'
+  },
+  {
+    id: '605119132',
+    title: 'Cypress-typescript',
+    description: 'try to forking on github',
+    technologies: ['TypeScript'],
+    githubUrl: 'https://github.com/rahmansopiann/Cypress-typescript'
+  },
+  {
+    id: '604129394',
+    title: 'wdioCucumberTs',
+    description: 'wdioCucumberTs',
+    technologies: ['TypeScript'],
+    githubUrl: 'https://github.com/rahmansopiann/wdioCucumberTs'
+  },
+  {
+    id: '601638171',
+    title: 'cypressui',
+    description: 'cypressui',
+    technologies: ['JavaScript'],
+    githubUrl: 'https://github.com/rahmansopiann/cypressui'
+  },
+  {
+    id: '599105877',
+    title: 'apiAutomationSanber',
+    description: 'apiAutomationSanber',
+    technologies: ['HTML'],
+    githubUrl: 'https://github.com/rahmansopiann/apiAutomationSanber'
+  },
+  {
+    id: '605960209',
+    title: 'himpun-qa',
+    description: 'Himpunan materi menjadi software quality assurance berbahasa Indonesia',
+    technologies: ['Other'],
+    githubUrl: 'https://github.com/rahmansopiann/himpun-qa'
   }
 ];
