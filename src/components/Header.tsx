@@ -31,7 +31,7 @@ export default function Header() {
     >
       <div className="container mx-auto px-10 flex items-center justify-between">
         <a href="#" className="font-display text-xl font-extrabold tracking-tighter text-accent uppercase">
-          MY<span className="text-white"> PORTFOLIO</span>
+          RAHMAN<span className="text-white"> SOPIAN</span>
         </a>
 
         {/* Desktop Nav */}

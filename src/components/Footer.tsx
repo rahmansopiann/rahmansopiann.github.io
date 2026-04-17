@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin, Mail, ArrowUpRight } from 'lucide-react';
+import { Github, Twitter, Linkedin, Mail, ArrowUpRight, Instagram } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -29,9 +29,9 @@ export default function Footer() {
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-widest text-white/40 mb-6">Socials</h4>
                 <div className="flex flex-col gap-4 text-sm font-medium">
-                  <a href="#" className="hover:text-accent transition-colors flex items-center gap-2">Github</a>
-                  <a href="#" className="hover:text-accent transition-colors flex items-center gap-2">LinkedIn</a>
-                  <a href="#" className="hover:text-accent transition-colors flex items-center gap-2">Instagram</a>
+                  <a href="https://github.com/rahmansopiann" className="hover:text-accent transition-colors flex items-center gap-2">Github</a>
+                  <a href="https://linkedin.com/in/rahmansopiann" className="hover:text-accent transition-colors flex items-center gap-2">LinkedIn</a>
+                  <a href="https://instagram.com/rahman_sopiann" className="hover:text-accent transition-colors flex items-center gap-2">Instagram</a>
                 </div>
               </div>
               <div>
@@ -60,7 +60,7 @@ export default function Footer() {
           </p>
           <div className="flex gap-8">
             <a href="#" className="text-white/40 hover:text-white transition-colors"><Mail size={20} /></a>
-            <a href="#" className="text-white/40 hover:text-white transition-colors"><Twitter size={20} /></a>
+            <a href="#" className="text-white/40 hover:text-white transition-colors"><Instagram size={20} /></a>
             <a href="#" className="text-white/40 hover:text-white transition-colors"><Linkedin size={20} /></a>
           </div>
         </div>

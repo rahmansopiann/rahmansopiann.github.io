@@ -8,15 +8,34 @@ export default function Hero() {
       <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-accent/10 rounded-full blur-[150px] animate-pulse delay-1000" />
 
       <div className="container mx-auto px-6 relative z-10 text-center">
+        {/* Floating tech stack or profile photo could go here */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="mt-20 flex justify-center"
+        >
+          <div className="relative group flex flex-col items-center">
+          <span className="text-sm uppercase tracking-[0.3em] text-white/60 font-medium mb-12 block">
+            Welcome to the <span className="text-accent">web portfolio</span> of
+          </span>
+            <div className="absolute inset-0 bg-accent/40 rounded-full blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-50" />
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-[6px] border-glass-border relative z-10 shadow-2xl">
+              <img
+                src="src\img\WhatsApp Image 2026-04-16 at 17.41.35.jpeg"
+                alt="Profile"
+                className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+          </div>
+        </motion.div>
         <motion.div
           initial={{ opacity: 0.8, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           className="flex flex-col items-center"
         >
-          <span className="text-sm uppercase tracking-[0.3em] text-white/60 font-medium mb-12 block">
-            Welcome to the <span className="text-accent">web portfolio</span> of
-          </span>
-          <span className="font-display text-7xl md:text-9xl font-bold tracking-tighter mb-16 leading-tight">
+          <span className="font-display text-5xl md:text-7xl font-bold tracking-tighter mb-9 leading-tight">
             Rahman <span className="text-accent">Sopian</span>
           </span>
           
@@ -48,26 +67,6 @@ export default function Hero() {
             >
               Github
             </a>
-          </div>
-        </motion.div>
-
-        {/* Floating tech stack or profile photo could go here */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="mt-20 flex justify-center"
-        >
-          <div className="relative group">
-            <div className="absolute inset-0 bg-accent/40 rounded-full blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-50" />
-            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-[6px] border-glass-border relative z-10 shadow-2xl">
-              <img
-                src="https://picsum.photos/seed/portrait/400/400"
-                alt="Profile"
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                referrerPolicy="no-referrer"
-              />
-            </div>
           </div>
         </motion.div>
       </div>
