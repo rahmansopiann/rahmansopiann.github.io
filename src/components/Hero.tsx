@@ -22,7 +22,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-accent/40 rounded-full blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-50" />
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-[6px] border-glass-border relative z-10 shadow-2xl">
               <img
-                src="src\img\WhatsApp Image 2026-04-16 at 17.41.35.jpeg"
+                src="/img/profile.jpeg"
                 alt="Profile"
                 className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
