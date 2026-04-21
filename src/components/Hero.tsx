@@ -1,4 +1,5 @@
-import { motion } from 'motion/react';
+import { motion } from "motion/react";
+import profile from "../img/profile.jpeg";
 
 export default function Hero() {
   return (
@@ -16,13 +17,15 @@ export default function Hero() {
           className="mt-20 flex justify-center"
         >
           <div className="relative group flex flex-col items-center">
-          <span className="text-sm uppercase tracking-[0.3em] text-white/60 font-medium mb-12 block">
-            Welcome to the <span className="text-accent">web portfolio</span> of
-          </span>
+            <span className="text-sm uppercase tracking-[0.3em] text-white/60 font-medium mb-12 block">
+              Welcome to the <span className="text-accent">web portfolio</span>{" "}
+              of
+            </span>
             <div className="absolute inset-0 bg-accent/40 rounded-full blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-50" />
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-[6px] border-glass-border relative z-10 shadow-2xl">
+              return{" "}
               <img
-                src="/img/profile.jpeg"
+                src={profile}
                 alt="Profile"
                 className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
@@ -38,18 +41,26 @@ export default function Hero() {
           <span className="font-display text-5xl md:text-7xl font-bold tracking-tighter mb-9 leading-tight">
             Rahman <span className="text-accent">Sopian</span>
           </span>
-          
+
           <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] text-white/40 font-bold mb-16">
             Scroll down to learn more about my skills & experiences
           </p>
 
           {/* Tech Logos row - Placeholder icons */}
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mb-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-            <span className="font-display font-medium text-xl">Manual Testing</span>
-            <span className="font-display font-medium text-xl flex items-center gap-2">Postman</span>
-            <span className="font-display font-medium text-xl flex items-center gap-2">Cypress</span>
+            <span className="font-display font-medium text-xl">
+              Manual Testing
+            </span>
+            <span className="font-display font-medium text-xl flex items-center gap-2">
+              Postman
+            </span>
+            <span className="font-display font-medium text-xl flex items-center gap-2">
+              Cypress
+            </span>
             <span className="font-display font-medium text-xl">Playwright</span>
-            <span className="font-display font-medium text-xl flex items-center gap-2">PostgreSQL</span>
+            <span className="font-display font-medium text-xl flex items-center gap-2">
+              PostgreSQL
+            </span>
             <span className="font-display font-medium text-xl">K6</span>
           </div>
 
@@ -58,7 +69,9 @@ export default function Hero() {
               href="#contact"
               className="group relative w-full sm:w-48 py-4 rounded-lg bg-transparent border border-white/20 text-sm font-bold uppercase tracking-widest overflow-hidden hover:border-white transition-colors"
             >
-              <span className="relative z-10 transition-colors">Contact Me</span>
+              <span className="relative z-10 transition-colors">
+                Contact Me
+              </span>
               <div className="absolute inset-0 bg-white/5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </a>
             <a
