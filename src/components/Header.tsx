@@ -63,17 +63,18 @@ export default function Header() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black border-b border-white/10"
+            initial={{ opacity: 0, y: -20 }} // Ubah height ke y agar animasi lebih smooth
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            // Tambahkan class 'absolute top-20 left-0 w-full'
+            className="absolute top-20 left-0 w-full md:hidden bg-black/95 backdrop-blur-lg border-b border-white/10 z-[-1]"
           >
-            <div className="container mx-auto px-6 py-8 flex flex-col space-y-6">
+            <div className="container mx-auto px-10 py-8 flex flex-col space-y-6">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-xl font-medium hover:text-accent transition-colors"
+                  className="text-xl font-medium text-white hover:text-accent transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
