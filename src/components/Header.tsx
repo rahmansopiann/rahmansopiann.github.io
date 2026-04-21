@@ -48,15 +48,6 @@ export default function Header() {
               {link.name}
             </a>
           ))}
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full text-sm font-bold hover:bg-accent hover:text-white transition-all transform hover:scale-105"
-          >
-            <Github size={18} />
-            GitHub
-          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -88,15 +79,6 @@ export default function Header() {
                   {link.name}
                 </a>
               ))}
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-white text-black px-6 py-3 rounded-full text-lg font-bold"
-              >
-                <Github size={20} />
-                GitHub
-              </a>
             </div>
           </motion.div>
         )}
