@@ -45,21 +45,30 @@ export default function Hero() {
           </p>
 
           {/* Tech Logos row - Placeholder icons */}
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mb-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-            <span className="font-display font-medium text-xl">
-              Manual Testing
-            </span>
-            <span className="font-display font-medium text-xl flex items-center gap-2">
-              Postman
-            </span>
-            <span className="font-display font-medium text-xl flex items-center gap-2">
-              Cypress
-            </span>
-            <span className="font-display font-medium text-xl">Playwright</span>
-            <span className="font-display font-medium text-xl flex items-center gap-2">
-              PostgreSQL
-            </span>
-            <span className="font-display font-medium text-xl">K6</span>
+          <div className="relative w-screen mb-20 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
+            <motion.div
+              className="flex whitespace-nowrap gap-12 md:gap-16 items-center"
+              animate={{
+                x: [0, -1000],
+              }}
+              transition={{
+                duration: 25,
+                ease: "linear",
+                repeat: Infinity,
+              }}
+            >
+              {/* Render 2 atau 3 kali agar tidak ada celah kosong saat looping */}
+              {[1, 2, 3].map((loop) => (
+                <div key={loop} className="flex gap-12 md:gap-16 items-center opacity-40 grayscale hover:grayscale-0 transition-all">
+                  <span className="font-display font-medium text-xl">Manual Testing</span>
+                  <span className="font-display font-medium text-xl">Postman</span>
+                  <span className="font-display font-medium text-xl">Cypress</span>
+                  <span className="font-display font-medium text-xl">Playwright</span>
+                  <span className="font-display font-medium text-xl">PostgreSQL</span>
+                  <span className="font-display font-medium text-xl">K6</span>
+                </div>
+              ))}
+            </motion.div>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
