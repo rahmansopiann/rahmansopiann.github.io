@@ -33,7 +33,7 @@ export default function Header() {
     >
       <div className="container mx-auto px-10 flex items-center justify-between">
         <a href="#" className="font-display text-xl font-extrabold tracking-tighter text-accent uppercase">
-          MY<span className="text-white"> PORTFOLIO</span>
+          RAHMAN<span className="text-white"> SOPIAN</span>
         </a>
 
         {/* Desktop Nav */}
@@ -80,17 +80,17 @@ export default function Header() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black border-b border-white/10"
+            initial={{ opacity: 0, y: -20 }} 
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="absolute top-20 left-0 w-full md:hidden bg-black/95 backdrop-blur-lg border-b border-white/10 z-[-1]"
           >
-            <div className="container mx-auto px-6 py-8 flex flex-col space-y-6">
+            <div className="container mx-auto px-10 py-8 flex flex-col space-y-6">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-xl font-medium hover:text-accent transition-colors"
+                  className="text-xl font-medium text-white hover:text-accent transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
