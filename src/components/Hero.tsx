@@ -1,6 +1,9 @@
-import { motion } from "motion/react";
+import { motion } from 'motion/react';
+import { useLanguage } from '../lib/LanguageContext';
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background blobs */}
@@ -36,12 +39,15 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           className="flex flex-col items-center"
         >
-          <span className="font-display text-5xl md:text-7xl font-bold tracking-tighter mb-9 leading-tight">
+          <span className="text-sm uppercase tracking-[0.3em] text-white/60 font-medium mb-12 block">
+            {t.hero.welcome}
+          </span>
+          <span className="font-display text-7xl md:text-9xl font-bold tracking-tighter mb-16 leading-tight">
             Rahman <span className="text-accent">Sopian</span>
           </span>
 
           <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] text-white/40 font-bold mb-16">
-            Scroll down to learn more about my skills & experiences
+            {t.hero.scroll}
           </p>
 
           {/* Tech Logos row - Placeholder icons */}
@@ -76,16 +82,14 @@ export default function Hero() {
               href="#contact"
               className="group relative w-full sm:w-48 py-4 rounded-lg bg-transparent border border-white/20 text-sm font-bold uppercase tracking-widest overflow-hidden hover:border-white transition-colors"
             >
-              <span className="relative z-10 transition-colors">
-                Contact Me
-              </span>
+              <span className="relative z-10 transition-colors">{t.hero.contactMe}</span>
               <div className="absolute inset-0 bg-white/5 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </a>
             <a
               href="https://github.com/rahmansopiann"
               className="w-full sm:w-48 py-4 rounded-lg bg-[#111] text-white text-sm font-bold uppercase tracking-widest border border-accent/30 hover:bg-accent hover:border-accent transition-all duration-300 shadow-[0_0_20px_rgba(96,73,234,0.15)]"
             >
-              Github
+              {t.hero.github}
             </a>
           </div>
         </motion.div>

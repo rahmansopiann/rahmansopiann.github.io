@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Github, Search as SearchIcon } from 'lucide-react';
 import { cn } from '@/src/lib/utils';
+import { useLanguage } from '../lib/LanguageContext';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,10 +18,10 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' },
+    { name: t.nav.home, href: '#' },
+    { name: t.nav.projects, href: '#projects' },
+    { name: t.nav.skills, href: '#skills' },
+    { name: t.nav.contact, href: '#contact' },
   ];
 
   return (
@@ -48,6 +50,21 @@ export default function Header() {
               {link.name}
             </a>
           ))}
+          <button
+            onClick={() => setLanguage(language === 'en' ? 'id' : 'en')}
+            className="text-sm font-bold px-3 py-1 rounded-full border border-white/20 hover:bg-white/10 transition-colors"
+          >
+            {language === 'en' ? 'ID' : 'EN'}
+          </button>
+          <a
+            href="https://github.com/rahmansopiann"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full text-sm font-bold hover:bg-accent hover:text-white transition-all transform hover:scale-105"
+          >
+            <Github size={18} />
+            GitHub
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -79,6 +96,24 @@ export default function Header() {
                   {link.name}
                 </a>
               ))}
+              <button
+                onClick={() => {
+                  setLanguage(language === 'en' ? 'id' : 'en');
+                  setIsMobileMenuOpen(false);
+                }}
+                className="text-xl font-medium hover:text-accent transition-colors text-left"
+              >
+                {language === 'en' ? 'Indonesian (ID)' : 'English (EN)'}
+              </button>
+              <a
+                href="https://github.com/rahmansopiann"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-white text-black px-6 py-3 rounded-full text-lg font-bold"
+              >
+                <Github size={20} />
+                GitHub
+              </a>
             </div>
           </motion.div>
         )}
