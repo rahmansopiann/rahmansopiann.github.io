@@ -7,8 +7,11 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import { LanguageProvider, useLanguage } from './lib/LanguageContext';
 
-export default function App() {
+function MainContent() {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -19,7 +22,7 @@ export default function App() {
         <section id="skills" className="py-24">
           <div className="container mx-auto px-6">
             <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-16 text-center">
-              Tech <span className="text-accent italic">Stack</span>
+              {t.skills.tech} <span className="text-accent italic">{t.skills.stack}</span>
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
               {[
@@ -50,3 +53,10 @@ export default function App() {
   );
 }
 
+export default function App() {
+  return (
+    <LanguageProvider>
+      <MainContent />
+    </LanguageProvider>
+  );
+}

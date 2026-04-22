@@ -3,10 +3,12 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Search as SearchIcon, Github, ExternalLink, Tag } from 'lucide-react';
 import { projects } from '../data';
 import { cn } from '../lib/utils';
+import { useLanguage } from '../lib/LanguageContext';
 
 export default function Projects() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeTab, setActiveTab] = useState('All');
+  const { t } = useLanguage();
 
   const categories = ['All', ...new Set(projects.flatMap(p => p.technologies))].slice(0, 8);
 
@@ -28,10 +30,10 @@ export default function Projects() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
           <div>
             <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-4">
-              Featured <span className="text-accent">Projects</span>
+              {t.projects.featured} <span className="text-accent">{t.projects.projectsSpan}</span>
             </h2>
             <span className="text-xs uppercase tracking-[0.2em] text-white/40 font-bold">
-              Showing {filteredProjects.length} of {projects.length} repositories
+              {t.projects.showing} {filteredProjects.length} {t.projects.of} {projects.length} {t.projects.repositories}
             </span>
           </div>
 
@@ -39,7 +41,7 @@ export default function Projects() {
             <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 text-white/40" size={18} />
             <input
               type="text"
-              placeholder="Search by name or tech..."
+              placeholder={t.projects.search}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-white/5 border border-white/10 rounded-full py-4 pl-12 pr-6 text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
@@ -101,7 +103,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       className="group/link flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white hover:text-accent transition-colors"
                     >
-                      View Repository
+                      {t.projects.viewRepo}
                       <span className="transition-transform group-hover/link:translate-x-1">→</span>
                     </a>
                   </div>
@@ -113,7 +115,7 @@ export default function Projects() {
 
         {filteredProjects.length === 0 && (
           <div className="py-20 text-center">
-            <p className="text-white/40 text-lg">No projects found matching your search.</p>
+            <p className="text-white/40 text-lg">{t.projects.noProjects}</p>
           </div>
         )}
       </div>
