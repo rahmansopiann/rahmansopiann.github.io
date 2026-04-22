@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Github, Search as SearchIcon } from 'lucide-react';
+import { Menu, X, Search as SearchIcon } from 'lucide-react';
 import { cn } from '@/src/lib/utils';
 import { useLanguage } from '../lib/LanguageContext';
 
@@ -56,15 +56,6 @@ export default function Header() {
           >
             {language === 'en' ? 'ID' : 'EN'}
           </button>
-          <a
-            href="https://github.com/rahmansopiann"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full text-sm font-bold hover:bg-accent hover:text-white transition-all transform hover:scale-105"
-          >
-            <Github size={18} />
-            GitHub
-          </a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -105,15 +96,6 @@ export default function Header() {
               >
                 {language === 'en' ? 'Indonesian (ID)' : 'English (EN)'}
               </button>
-              <a
-                href="https://github.com/rahmansopiann"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-white text-black px-6 py-3 rounded-full text-lg font-bold"
-              >
-                <Github size={20} />
-                GitHub
-              </a>
             </div>
           </motion.div>
         )}

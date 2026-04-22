@@ -23,6 +23,7 @@ export const translations = {
       search: 'Search by name or tech...',
       viewRepo: 'View Repository',
       noProjects: 'No projects found matching your search.',
+      all: 'All',
     },
     skills: {
       tech: 'Tech',
@@ -62,10 +63,11 @@ export const translations = {
       search: 'Cari nama atau teknologi...',
       viewRepo: 'Lihat Repositori',
       noProjects: 'Tidak ada proyek yang sesuai dengan pencarian.',
+      all: 'Semua',
     },
     skills: {
-      tech: 'Tumpukan',
-      stack: 'Teknologi',
+      tech: 'Tech',
+      stack: 'Stack',
     },
     footer: {
       ready: 'Siap berkolaborasi?',

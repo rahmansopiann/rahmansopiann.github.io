@@ -19,10 +19,13 @@ export default function Hero() {
           className="mt-20 flex justify-center"
         >
           <div className="relative group flex flex-col items-center">
-            <span className="text-sm uppercase tracking-[0.3em] text-white/60 font-medium mb-12 block">
+            {/* <span className="text-sm uppercase tracking-[0.3em] text-white/60 font-medium mb-12 block">
               Welcome to the <span className="text-accent">web portfolio</span>{" "}
               of
-            </span>
+            </span> */}
+          <span className="text-sm uppercase tracking-[0.3em] text-white/60 font-medium mb-12 block">
+            {t.hero.welcome}
+          </span>
             <div className="absolute inset-0 bg-accent/40 rounded-full blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-50" />
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-[6px] border-glass-border relative z-10 shadow-2xl">
               <img
@@ -39,9 +42,6 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           className="flex flex-col items-center"
         >
-          <span className="text-sm uppercase tracking-[0.3em] text-white/60 font-medium mb-12 block">
-            {t.hero.welcome}
-          </span>
           <span className="font-display text-7xl md:text-9xl font-bold tracking-tighter mb-16 leading-tight">
             Rahman <span className="text-accent">Sopian</span>
           </span>

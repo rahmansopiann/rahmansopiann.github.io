@@ -6,19 +6,18 @@ import { cn } from '../lib/utils';
 import { useLanguage } from '../lib/LanguageContext';
 
 export default function Projects() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeTab, setActiveTab] = useState('All');
   const { t } = useLanguage();
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeTab, setActiveTab] = useState(t.projects.all);
 
-  const categories = ['All', ...new Set(projects.flatMap(p => p.technologies))].slice(0, 8);
+  const categories = [t.projects.all, ...new Set(projects.flatMap(p => p.technologies))].slice(0, 8);
 
   const filteredProjects = useMemo(() => {
     return projects.filter(project => {
       const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                             project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                             project.technologies.some(t => t.toLowerCase().includes(searchQuery.toLowerCase()));
-      
-      const matchesTab = activeTab === 'All' || project.technologies.includes(activeTab);
+      const matchesTab = activeTab === t.projects.all || project.technologies.includes(activeTab);
       
       return matchesSearch && matchesTab;
     });

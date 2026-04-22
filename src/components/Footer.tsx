@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin, Mail, ArrowUpRight } from 'lucide-react';
+import { Github, Twitter, Linkedin, Mail, ArrowUpRight, Instagram } from 'lucide-react';
 import { useLanguage } from '../lib/LanguageContext';
 
 export default function Footer() {
@@ -61,9 +61,9 @@ export default function Footer() {
             &copy; {currentYear} Rahman Sopian. {t.footer.rights}
           </p>
           <div className="flex gap-8">
-            <a href="#" className="text-white/40 hover:text-white transition-colors"><Mail size={20} /></a>
-            <a href="#" className="text-white/40 hover:text-white transition-colors"><Instagram size={20} /></a>
-            <a href="#" className="text-white/40 hover:text-white transition-colors"><Linkedin size={20} /></a>
+            <a href="mailto:rahmansopian6@gmail.com" className="text-white/40 hover:text-white transition-colors"><Mail size={20} /></a>
+            <a href="https://instagram.com/rahman_sopiann" className="text-white/40 hover:text-white transition-colors"><Instagram size={20} /></a>
+            <a href="https://linkedin.com/in/rahmansopiann" className="text-white/40 hover:text-white transition-colors"><Linkedin size={20} /></a>
           </div>
         </div>
       </div>
